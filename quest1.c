@@ -22,10 +22,8 @@ int main(){
     vet1[z]=vet[sa] + vet[se];
     se ++;
     sa ++;
-     if(vet1!=vet){
-        vet[z]=vet1[z];
-    }
-   printf("(%d) ",vet[z]);
+    vet[z]=vet1[z];
+    printf("%d ",vet[z]);
    }
     printf("\n");
     se=1;
