@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<math.h>
-//incompleto!!!!
+//completo
 int main(){
     int i;
     int vet[10],vet1[10];
@@ -15,21 +15,22 @@ int main(){
     }
     printf("\n");
    
-  for (int wh=0;wh<=i;wh++){
-   i=i-2;
+   i=8;
+   for(int f=0;f<=9;f++){
+
    for(int z=0;z<=i;z++){
     vet1[z]=vet[sa] + vet[se];
     se ++;
     sa ++;
-    
-     printf("%d ",vet1[z]);
      if(vet1!=vet){
-        vet1[z]=1*vet[z];
-     }
-     
+        vet[z]=vet1[z];
     }
+   printf("(%d) ",vet[z]);
+   }
     printf("\n");
-    //i=i-2;
-}
-    return 0;
-}
+    se=1;
+    sa=0;
+    i=i-1;
+   }
+return 0;
+}1
