@@ -6,12 +6,19 @@ int main(){
     int vet[10],vet1[10];
     int sa=0;
     int se=1;
+    //int esp=0;
+    //int cont;
 
     for (i=0;i<=9;i++){
     scanf("%d",&vet[i]);
     }
     for (i=0;i<=9;i++){
-    printf("%d ",vet[i]);
+    if(i==0){
+    printf("%d",vet[i]);
+    }
+    else if(i>0){
+    printf(" %d",vet[i]);    
+    }
     }
     printf("\n");
    
@@ -23,7 +30,13 @@ int main(){
     se ++;
     sa ++;
     vet[z]=vet1[z];
-    printf("%d ",vet[z]);
+    //cont=i-1;
+    if(z==0){
+    printf("%d",vet[z]);
+    }
+    else if(i>0){
+    printf(" %d",vet[z]);  
+    }
    }
     printf("\n");
     se=1;
