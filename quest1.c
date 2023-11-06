@@ -6,8 +6,7 @@ int main(){
     int vet[10],vet1[10];
     int sa=0;
     int se=1;
-    //int esp=0;
-    //int cont;
+   
 
     for (i=0;i<=9;i++){
     scanf("%d",&vet[i]);
@@ -30,7 +29,7 @@ int main(){
     se ++;
     sa ++;
     vet[z]=vet1[z];
-    //cont=i-1;
+    
     if(z==0){
     printf("%d",vet[z]);
     }
