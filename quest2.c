@@ -13,11 +13,14 @@ int main() {
     char posicao;
     int forca;
    //Segundo_Time_
-   char nome_time2[62];
+   char nome_time2[31];
+   char jk[90];
     int t2forca_goleiro1 = 0;
     int t2forca_laterais1 = 0, t2forca_laterais2 = 0, t2forca_zagueiros1 = 0, t2forca_zagueiros2 = 0, t2forca_volantes1 = 0, t2forca_volantes2=0, t2forca_meias1 = 0, t2forca_meias2 = 0, t2forca_atacantes1 = 0, t2forca_atacantes2 = 0;
 
-    scanf("%30s", nome_time1);
+    //scanf("%30s", nome_time1);   //NAO APAGAR 
+fgets(nome_time1,sizeof(nome_time1),stdin);
+printf("%s:  de forca\n", nome_time1);
 
     for (int i = 0; i <= 10; i++) {
         scanf(" %30[^;]; %c; %d", nome, &posicao, &forca);
@@ -57,14 +60,8 @@ int main() {
         }
     }
    
-     scanf("%s",nome_time2);
-     printf("%s",nome_time2);
-    //nome_time2[strcspn(nome_time2, "\n")] = '\0';
-    //fgets(nome_time2, sizeof(nome_time2), stdin);  // Lê uma linha, incluindo espaços em branco
-    //nome_time2[strcspn(nome_time2, "\n")] = '\0';
-    //fgets(nome_time2, sizeof(nome_time2), stdin);
-    //nome_time2[strcspn(nome_time2, "\n")] = '\0';
-
+     
+     fgets(nome_time2,sizeof(nome_time2), stdin);  // Lê uma linha, incluindo espaços em branco
 
     for (int i=0;i <= 10; i++) {
         scanf(" %30[^;]; %c; %d", nome, &posicao, &forca);
