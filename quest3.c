@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include<math.h>
+#include<string.h>
 
 int main() {
     int A[4][4], B[4][4], resultado[4][4];
