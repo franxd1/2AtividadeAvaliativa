@@ -13,17 +13,20 @@ int main() {
     char posicao;
     int forca;
    //Segundo_Time_
-   char nome_time2[31];
-   char jk[90];
+    char nome_time2[31];
+    char jk[90];
     int t2forca_goleiro1 = 0;
     int t2forca_laterais1 = 0, t2forca_laterais2 = 0, t2forca_zagueiros1 = 0, t2forca_zagueiros2 = 0, t2forca_volantes1 = 0, t2forca_volantes2=0, t2forca_meias1 = 0, t2forca_meias2 = 0, t2forca_atacantes1 = 0, t2forca_atacantes2 = 0;
+    int contador=0;
+    char caractere;
+   // scanf("%30s", nome_time1);   //NAO APAGAR 
+    //fgets(nome_time1,sizeof(nome_time1),stdin);
 
-    scanf("%30s", nome_time1);   //NAO APAGAR 
-//fgets(nome_time1,sizeof(nome_time1),stdin);
-printf("%s:  de forca\n", nome_time1);
+    scanf("%[^\n]", nome_time1);
+    //printf("%s:  de forca\n", nome_time1);
 
     for (int i = 0; i <= 10; i++) {
-        scanf(" %30[^;]; %c; %d", nome, &posicao, &forca);
+        scanf("%30[^;]; %c; %d", nome, &posicao, &forca);
 
         if (posicao == 'G') {
             forca_goleiro1 = forca;
@@ -62,7 +65,8 @@ printf("%s:  de forca\n", nome_time1);
    
      
      //fgets(nome_time2,sizeof(nome_time2), stdin);  
-     scanf("%s",&nome_time2);
+    scanf(" %[^\n]", nome_time2);
+
     for (int i=0;i <= 10; i++) {
         scanf(" %30[^;]; %c; %d", nome, &posicao, &forca);
 
@@ -102,17 +106,16 @@ printf("%s:  de forca\n", nome_time1);
     }
 
     float forca_time1 = calcular_forca(forca_goleiro1, forca_laterais1, forca_laterais2, forca_zagueiros1, forca_zagueiros2, forca_volantes1, forca_volantes2, forca_meias1, forca_meias2, forca_atacantes1, forca_atacantes2);
-    
     float forca_time2 = calcular_forca(t2forca_goleiro1, t2forca_laterais1, t2forca_laterais2, t2forca_zagueiros1,t2forca_zagueiros2, t2forca_volantes1, t2forca_volantes2, t2forca_meias1, t2forca_meias2, t2forca_atacantes1, t2forca_atacantes2);
 
     
     printf("%s: %0.2lf de forca\n", nome_time1, forca_time1);
     printf("%s: %0.2lf de forca\n", nome_time2, forca_time2);
 
-  if(nome_time1>nome_time2){
-    printf("%s eh mais forte\n",nome_time1);
-  }else if(nome_time2>nome_time1){
-    printf("%s eh mais forte\n",nome_time2);
+  if(forca_time1>forca_time2){
+    printf("%s eh mais forte\n", nome_time1);
+  }else if(forca_time2>forca_time1){
+    printf("%s eh mais forte\n", nome_time2);
   }
     return 0;
 }

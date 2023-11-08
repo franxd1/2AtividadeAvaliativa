@@ -22,7 +22,7 @@ int main(){
     printf("\n");
    
    i=8;
-   for(int f=0;f<=9;f++){
+   for(int f=0;f<9;f++){
 
    for(int z=0;z<=i;z++){
     vet1[z]=vet[sa] + vet[se];
